@@ -17,8 +17,8 @@
             <div class="sidebar">
                 <!-- Logo -->
                 <div class="sidebar__logo">
-                    <a class="menu-sidebar__link" href="#">
-                        <img class="menu-sidebar__image" src="./images/logo.png" alt="logo">
+                    <a class="sidebar__link" href="#">
+                        <img class="sidebar__image" src="./images/logo.png" alt="logo">
                     </a>
                 </div>
                 <!-- Menu -->
@@ -27,58 +27,58 @@
                         <ul class="sidebar__list">
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu"> 
-                                    <span class="sidebar__tachometr">
+                                    <div class="sidebar__tachometr">
                                         Dashboard
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu">
-                                    <span class="sidebar__chart">
+                                    <div class="sidebar__chart">
                                         Charts
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu">
-                                    <span class="sidebar__table">
+                                    <div class="sidebar__table">
                                         Tables
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu">
-                                    <span class="sidebar__forms">
+                                    <div class="sidebar__forms">
                                         Forms
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu"> 
-                                    <span class="sidebar__calendar">
+                                    <div class="sidebar__calendar">
                                         Calendar
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu"> 
-                                    <span class="sidebar__map">
+                                    <div class="sidebar__map">
                                         Maps
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu"> 
-                                    <span class="sidebar__pages">
+                                    <div class="sidebar__pages">
                                         Pages
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__links-menu"> 
-                                    <span class="sidebar__ui">
+                                    <div class="sidebar__ui">
                                         UI Elements
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
@@ -87,7 +87,54 @@
             </div>
             <!-- Content -->
             <div class="contant-container">
-                <header class="header"></header>
+                <!-- Desktop container -->
+                <header class="header">
+                    <div class="header__desktop">
+                        <div class="header__wrap">
+                            <form action="POST" class="header__form">
+                                <input type="text" class="header__input" name="search"
+                                placeholder="Search for datas & reports...">
+                                <button class="header__submit" type="submit">
+                                    <span class="header__icon-submit"></span>
+                                </button>
+                            </form>
+                            <div class="header__button-wrap">
+                                <div class="header__notif">
+                                    <div class="header__notif_icon">
+                                        <div class="header__notif_icon-coment">
+                                            <span class="qwant">
+                                                1
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="header__notif_icon">
+                                        <div class="header__notif_icon-email">
+                                            <span class="qwant">
+                                                1
+                                            </span>
+                                        </div>             
+                                    </div>
+                                    <div class="header__notif_icon">
+                                        <div class="header__notif_icon-notifications">
+                                            <span class="qwant">
+                                                3
+                                            </span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="header__account">
+                                    <img class="header__image" src="./images/avatar-01.jpg" alt="">
+                                    <div class="header__content">
+                                        <a href="#">
+                                            John Doe
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
                 <div class="main"></div>
             </div>
         </div>
