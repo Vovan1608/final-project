@@ -11,6 +11,7 @@ body{
     font-family: $main-font;
     color: $main-color;
     line-height: 1.6;
+    max-width: 100%;
 }
 
 .main-wrapper{
@@ -223,6 +224,14 @@ body{
             font-weight: 900;
             height: 45px;
             width: 25px;
+
+            &:hover{
+                color: #666;
+            
+                & .dropdown{
+                    transform: scale(1);
+                }
+            }
         }
 
         &_icon-coment::before{
@@ -240,23 +249,45 @@ body{
 
     &__account{
         @include flex-center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__link{
+        display: flex;
+        text-decoration: none;
     }
 
     &__image{
         width: 45px;
         height: 45px;
-        float: left;
         overflow: hidden;
         border-radius: 3px;
     }
 
     &__content{
-        margin-left: 45px;
-        padding: 9px 0;
-        padding-left: 12px;
+        padding: 9px 0 9px 12px;
+        padding-left: 12px; 
+        color: #333;
+        text-transform: capitalize;
+        font-weight: 500;
         
-    }
+        &:hover{
+            color: #666;
 
+            & .dropdown{
+                transform: scale(1);
+            }
+        }
+
+        &::after{
+            content: '\f2f9';
+            font-family: "Material-Design-Iconic-Font";
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
 }
 
 .qwant{
@@ -272,6 +303,148 @@ body{
     color: #fff;
     border-radius: 100%;
     font-size: 12px;
+}
+
+.dropdown{
+    transform: scale(0);
+    top: 58px;
+    left: -55px;
+    position: absolute;
+    z-index: 9999;
+    min-width: 340px;
+    background: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+    transition: all 0.4s ease;
+    transform-origin: left top;
+
+    &_position-notif{
+        left: -117px;
+
+        &::before{
+            @include position-triangle;
+            left: 117px !important;
+        }
+    }
+
+    &::before{
+        @include position-triangle;
+        left: 55px;    
+    }
+
+    &__title{
+
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.625;
+        color: $main-color;
+        padding: 22px;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    &__item{
+        display: flex;
+        padding: 19px 22px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f2f2f2;
+
+        &:hover{
+            background: #f7f7f7;
+        }
+    }
+
+    &__img-envelope{
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        margin-right: 15px;
+        overflow: hidden;
+    }
+
+    &__img{
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    &__content-envelope{
+        width: calc(100% - 55px);
+        text-align: left;
+
+        &_coment-size{
+            line-height: 1.6;
+        }
+
+        &_email-size{
+            line-height: 0.5;
+        }
+    }
+
+    &__name{
+        font-size: 14px;
+        font-weight: 600;
+        padding-top: 4px;
+        color: #333;
+        line-height: 1.2;
+    }
+
+    &__content{
+        font-size: 14px;
+        color: #9a9a9a;
+        line-height: calc(24/14);
+        margin-bottom: 4px;
+
+        &_line-h{
+            line-height: 1 !important;
+        }
+    }
+
+    &__time{
+        font-size: 12px;
+        color: #999;
+        line-height: 1.625;
+    }
+
+    &__link{
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 14px;
+        color: #4272d7;
+        padding: 24px 0;
+        text-decoration: none;
+        display: block;
+    }
+
+    &__email-open{
+        background: #00ad5f;
+        display: block;
+        text-align: center;
+
+        &::before{
+            content: '\f2b6';
+        }
+    }
+
+    &__account{
+        background: #fa4251;
+        display: block;
+        text-align: center;
+
+        &::before{
+            content: '\f3e0';
+        }
+    }
+
+    &__file-text{
+        background: #ff8300;
+        display: block;
+        text-align: center;
+
+        &::before{
+            content: '\f15c';
+        }
+    }
 }
 
 .main{

@@ -10,6 +10,7 @@ body {
   font-family: Poppins;
   color: #666;
   line-height: 1.6;
+  max-width: 100%;
 }
 
 .main-wrapper {
@@ -298,6 +299,15 @@ body {
   width: 25px;
 }
 
+.header__notif_icon:hover {
+  color: #666;
+}
+
+.header__notif_icon:hover .dropdown {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .header__notif_icon-coment::before {
   content: '\f27a';
 }
@@ -317,20 +327,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
 }
 
 .header__image {
   width: 45px;
   height: 45px;
-  float: left;
   overflow: hidden;
   border-radius: 3px;
 }
 
 .header__content {
-  margin-left: 45px;
-  padding: 9px 0;
+  padding: 9px 0 9px 12px;
   padding-left: 12px;
+  color: #333;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.header__content:hover {
+  color: #666;
+}
+
+.header__content:hover .dropdown {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.header__content::after {
+  content: '\f2f9';
+  font-family: "Material-Design-Iconic-Font";
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 .qwant {
@@ -346,6 +383,167 @@ body {
   color: #fff;
   border-radius: 100%;
   font-size: 12px;
+}
+
+.dropdown {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  top: 58px;
+  left: -55px;
+  position: absolute;
+  z-index: 9999;
+  min-width: 340px;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+.dropdown_position-notif {
+  left: -117px;
+}
+
+.dropdown_position-notif::before {
+  content: '\f0d8';
+  display: block;
+  width: 19px;
+  height: 19px;
+  color: #fff;
+  position: absolute;
+  z-index: 3;
+  top: -24px;
+  left: 117px !important;
+}
+
+.dropdown::before {
+  content: '\f0d8';
+  display: block;
+  width: 19px;
+  height: 19px;
+  color: #fff;
+  position: absolute;
+  z-index: 3;
+  top: -24px;
+  left: 55px;
+}
+
+.dropdown__title {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #666;
+  padding: 22px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.dropdown__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 19px 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.dropdown__item:hover {
+  background: #f7f7f7;
+}
+
+.dropdown__img-envelope {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.dropdown__img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.dropdown__content-envelope {
+  width: calc(100% - 55px);
+  text-align: left;
+}
+
+.dropdown__content-envelope_coment-size {
+  line-height: 1.6;
+}
+
+.dropdown__content-envelope_email-size {
+  line-height: 0.5;
+}
+
+.dropdown__name {
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 4px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.dropdown__content {
+  font-size: 14px;
+  color: #9a9a9a;
+  line-height: calc(24/14);
+  margin-bottom: 4px;
+}
+
+.dropdown__content_line-h {
+  line-height: 1 !important;
+}
+
+.dropdown__time {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.625;
+}
+
+.dropdown__link {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+  color: #4272d7;
+  padding: 24px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown__email-open {
+  background: #00ad5f;
+  display: block;
+  text-align: center;
+}
+
+.dropdown__email-open::before {
+  content: '\f2b6';
+}
+
+.dropdown__account {
+  background: #fa4251;
+  display: block;
+  text-align: center;
+}
+
+.dropdown__account::before {
+  content: '\f3e0';
+}
+
+.dropdown__file-text {
+  background: #ff8300;
+  display: block;
+  text-align: center;
+}
+
+.dropdown__file-text::before {
+  content: '\f15c';
 }
 
 .main {

@@ -11,3 +11,14 @@
     display: flex;
     align-items: center;
 }
+
+@mixin position-triangle {
+    content: '\f0d8';
+    display: block;
+    width: 19px;
+    height: 19px;
+    color: #fff;
+    position: absolute;
+    z-index: 3;
+    top: -24px;
+}
