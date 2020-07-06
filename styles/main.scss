@@ -792,5 +792,121 @@ body{
             @include chart-border;
         }
     }
+
+    &__table{
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        
+
+        &_left{
+            width: 100%;
+            max-width: 100%;
+            border-collapse: collapse;
+        }  
+    }
+
+    &__th{
+        display: table-cell;
+        background: #333;
+        font-size: 16px;
+        color: #fff;
+        vertical-align: middle;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 1;
+        white-space: nowrap;
+        padding: 22px 40px;
+        border: 0;
+        text-align: start;
+    }
+
+    &_text-r{
+        padding-left: 15px;
+        padding-right: 65px;
+        text-align: end !important;
+        
+    }
+
+    &__tr{
+        background-color: #fff;
+        border-spacing: 2px;
+        padding: 22px 40px;
+
+        &_odd{
+            background-color: #f5f5f5;
+        }
+    }
+
+    &__td{
+        display: table-cell;
+        font-size: 16px;
+        vertical-align: middle;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 1;
+        white-space: nowrap;
+        padding: 22px 40px;
+        border: 0;
+        text-align: start;
+    }
+
+    &__table-right{
+        padding: 40px;
+        padding-top: 25px;
+        padding-bottom: 29px;
+        background: -webkit-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        color: #fff;
+        
+
+        &_style{
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &_td{
+            white-space: nowrap;
+            font-size: 14px;
+            padding: 18px 5px;
+            border-top: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: start;
+
+            &-last{
+                border-bottom: none !important;
+            }
+        }
+    }
+
+    &__actions{
+        grid-template-columns: 2fr;
+
+        &_left{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        &_right{
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        
+    }
 }
+
+.three{
+    grid-column-start: 1;
+    grid-column-end: 4 !important;
+}
+
+.one{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+
 

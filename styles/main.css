@@ -1022,4 +1022,121 @@ body {
   height: 10px;
   margin-right: 7px;
 }
+
+.main__table {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.main__table_left {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.main__th {
+  display: table-cell;
+  background: #333;
+  font-size: 16px;
+  color: #fff;
+  vertical-align: middle;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 22px 40px;
+  border: 0;
+  text-align: start;
+}
+
+.main_text-r {
+  padding-left: 15px;
+  padding-right: 65px;
+  text-align: end !important;
+}
+
+.main__tr {
+  background-color: #fff;
+  border-spacing: 2px;
+  padding: 22px 40px;
+}
+
+.main__tr_odd {
+  background-color: #f5f5f5;
+}
+
+.main__td {
+  display: table-cell;
+  font-size: 16px;
+  vertical-align: middle;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 22px 40px;
+  border: 0;
+  text-align: start;
+}
+
+.main__table-right {
+  padding: 40px;
+  padding-top: 25px;
+  padding-bottom: 29px;
+  background: -webkit-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.main__table-right_style {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+
+.main__table-right_td {
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 18px 5px;
+  border-top: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: start;
+}
+
+.main__table-right_td-last {
+  border-bottom: none !important;
+}
+
+.main__actions {
+  -ms-grid-columns: 2fr;
+      grid-template-columns: 2fr;
+}
+
+.main__actions_left {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.main__actions_right {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.three {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4 !important;
+}
+
+.one {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
+}
 /*# sourceMappingURL=main.css.map */
