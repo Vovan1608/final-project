@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 body{
@@ -16,6 +17,7 @@ body{
 
 .main-wrapper{
     display: flex;
+    max-width: 100%;
 }
 
 .sidebar{
@@ -128,6 +130,7 @@ body{
 .contant-container{
     background: $c-c-bg-color;
     padding-left: 300px;
+    width: 100%;
 }
 
 .header{
@@ -196,7 +199,7 @@ body{
         position: absolute;
         top: 0;
         left: 39%;
-        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-family: $awesome;
         font-weight: 600;
 
         &::before{
@@ -220,7 +223,7 @@ body{
             cursor: pointer;
             font-size: 25px;
             color: #a9b3c9;
-            font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+            font-family: $awesome;
             font-weight: 900;
             height: 45px;
             width: 25px;
@@ -251,11 +254,16 @@ body{
         @include flex-center;
         cursor: pointer;
         position: relative;
+
+        &:hover .dropdown{
+            transform: scale(1);
+        }
     }
 
     &__link{
         display: flex;
         text-decoration: none;
+        position: relative;
     }
 
     &__image{
@@ -271,18 +279,15 @@ body{
         color: #333;
         text-transform: capitalize;
         font-weight: 500;
+        position: relative;
         
         &:hover{
             color: #666;
-
-            & .dropdown{
-                transform: scale(1);
-            }
         }
 
         &::after{
             content: '\f2f9';
-            font-family: "Material-Design-Iconic-Font";
+            font-family: $material;
             font-weight: 500;
             font-size: 16px;
             margin-left: 5px;
@@ -324,6 +329,19 @@ body{
         &::before{
             @include position-triangle;
             left: 117px !important;
+        }
+    }
+
+    &_position-account{
+        left: -157px !important;
+        min-width: 305px !important;
+        transform-origin: right top !important;
+
+        &::before{
+            @include position-triangle;
+            left: 238px !important;
+            top: -24px;
+            font-size: 24px;
         }
     }
 
@@ -445,11 +463,133 @@ body{
             content: '\f15c';
         }
     }
+
+    &__account-in{
+        padding: 25px;
+        border-top: 1px solid #f5f5f5;
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+    }
+
+    &__account-img{
+        height: 65px;
+        width: 65px;
+        overflow: hidden;
+        border-radius: 3px;
+        // margin-right: 11px;
+    }
+
+    &__account-content{
+        padding: 11px;
+        height: 65px;
+
+        &_name{
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.625;
+
+            &:hover{
+                color: #666;
+            }
+        }
+    }
+
+    &__box-item{
+        padding: 12px 0;
+    }
+
+    &__item-content{
+        cursor: pointer;
+    }
+
+    &__content-link{
+        display: block;
+        color: #333;
+        padding: 15px 25px;
+        font-size: 14px;
+        text-decoration: none;  
+
+        &:hover{
+            background: #4272d7;
+            color: #fff;
+        }
+    }
+
+    &__link-account::before{
+        content: '\f207';
+        @include links;
+    }
+
+    &__link-settings::before{
+        content: '\f1c6';
+        @include links;
+    }
+
+    &__link-bill::before{
+        content: '\f198';
+        @include links;
+    }
+
+    &__link-logOut::before{
+        content: '\f1af';
+        @include links;
+    }
+
+    &__footer{
+        border-top: 1px solid #f2f2f2;
+    }
 }
 
 .main{
     padding-top: 116px;
     min-height: 100vh;
     background: $c-c-bg-color;
-    width: 1620px;
+    min-width: 100%;
+
+    &__section{
+        padding: 0 45px;
+        position: relative;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__overview{
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content{
+        font-size: 30px;
+        color: #333;
+        line-height: 1.2;
+    }
+
+    &__button{
+        background: #4272d7;
+        line-height: 45px;
+        padding: 0 35px;
+        text-transform: uppercase;
+        color: #fff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+
+        &_icon{
+            vertical-align: baseline;
+            margin-right: 5px;
+            font-family: $material;
+            font-size: 16px;
+            font-weight: 500;
+
+            &::before{
+                content: '\f278';
+            }
+        }
+    }
 }
+

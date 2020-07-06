@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 100%;
 }
 
 .sidebar {
@@ -97,7 +99,7 @@ body {
 
 .sidebar__tachometr::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -107,7 +109,7 @@ body {
 
 .sidebar__chart::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -117,7 +119,7 @@ body {
 
 .sidebar__table::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -127,7 +129,7 @@ body {
 
 .sidebar__forms::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -137,7 +139,7 @@ body {
 
 .sidebar__calendar::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -147,7 +149,7 @@ body {
 
 .sidebar__map::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -157,7 +159,7 @@ body {
 
 .sidebar__pages::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -167,7 +169,7 @@ body {
 
 .sidebar__ui::before {
   content: "";
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -178,6 +180,7 @@ body {
 .contant-container {
   background: #e5e5e5;
   padding-left: 300px;
+  width: 100%;
 }
 
 .header {
@@ -258,7 +261,7 @@ body {
   position: absolute;
   top: 0;
   left: 39%;
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 600;
 }
 
@@ -293,7 +296,7 @@ body {
   cursor: pointer;
   font-size: 25px;
   color: #a9b3c9;
-  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
   height: 45px;
   width: 25px;
@@ -331,11 +334,17 @@ body {
   position: relative;
 }
 
+.header__account:hover .dropdown {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .header__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  position: relative;
 }
 
 .header__image {
@@ -351,15 +360,11 @@ body {
   color: #333;
   text-transform: capitalize;
   font-weight: 500;
+  position: relative;
 }
 
 .header__content:hover {
   color: #666;
-}
-
-.header__content:hover .dropdown {
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .header__content::after {
@@ -416,7 +421,32 @@ body {
   position: absolute;
   z-index: 3;
   top: -24px;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-weight: 900;
   left: 117px !important;
+}
+
+.dropdown_position-account {
+  left: -157px !important;
+  min-width: 305px !important;
+  -webkit-transform-origin: right top !important;
+          transform-origin: right top !important;
+}
+
+.dropdown_position-account::before {
+  content: '\f0d8';
+  display: block;
+  width: 19px;
+  height: 19px;
+  color: #fff;
+  position: absolute;
+  z-index: 3;
+  top: -24px;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-weight: 900;
+  left: 238px !important;
+  top: -24px;
+  font-size: 24px;
 }
 
 .dropdown::before {
@@ -428,6 +458,8 @@ body {
   position: absolute;
   z-index: 3;
   top: -24px;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-weight: 900;
   left: 55px;
 }
 
@@ -546,10 +578,162 @@ body {
   content: '\f15c';
 }
 
+.dropdown__account-in {
+  padding: 25px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropdown__account-img {
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.dropdown__account-content {
+  padding: 11px;
+  height: 65px;
+}
+
+.dropdown__account-content_name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.625;
+}
+
+.dropdown__account-content_name:hover {
+  color: #666;
+}
+
+.dropdown__box-item {
+  padding: 12px 0;
+}
+
+.dropdown__item-content {
+  cursor: pointer;
+}
+
+.dropdown__content-link {
+  display: block;
+  color: #333;
+  padding: 15px 25px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.dropdown__content-link:hover {
+  background: #4272d7;
+  color: #fff;
+}
+
+.dropdown__link-account::before {
+  content: '\f207';
+  line-height: 1;
+  margin-right: 20px;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Material-Design-Iconic-Font";
+}
+
+.dropdown__link-settings::before {
+  content: '\f1c6';
+  line-height: 1;
+  margin-right: 20px;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Material-Design-Iconic-Font";
+}
+
+.dropdown__link-bill::before {
+  content: '\f198';
+  line-height: 1;
+  margin-right: 20px;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Material-Design-Iconic-Font";
+}
+
+.dropdown__link-logOut::before {
+  content: '\f1af';
+  line-height: 1;
+  margin-right: 20px;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Material-Design-Iconic-Font";
+}
+
+.dropdown__footer {
+  border-top: 1px solid #f2f2f2;
+}
+
 .main {
   padding-top: 116px;
   min-height: 100vh;
   background: #e5e5e5;
-  width: 1620px;
+  min-width: 100%;
+}
+
+.main__section {
+  padding: 0 45px;
+  position: relative;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.main__overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: -1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__content {
+  font-size: 30px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.main__button {
+  background: #4272d7;
+  line-height: 45px;
+  padding: 0 35px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.main__button_icon {
+  vertical-align: baseline;
+  margin-right: 5px;
+  font-family: "Material-Design-Iconic-Font";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main__button_icon::before {
+  content: '\f278';
 }
 /*# sourceMappingURL=main.css.map */
