@@ -553,6 +553,8 @@ body{
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
     }
 
     &__overview{
@@ -589,6 +591,205 @@ body{
             &::before{
                 content: '\f278';
             }
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 60px;
+        color: #fff;
+        font-family: $material;
+        justify-content: start;
+        line-height: 1; 
+    }
+
+    &__cards{
+        grid-template-columns: 1fr;
+        height: 215px;
+        background-repeat: space;
+        
+        &_container{
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            height: 100%;
+
+            &-members{
+                background-image: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+                
+                &-icon::before{
+                    content: '\f206';
+                }
+            }
+
+            &-solid{
+                background-image: -webkit-linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+                
+                &-icon::before{
+                    content: '\f1cb';
+                }
+            }
+
+            &-week{
+                background-image: -webkit-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                
+                &-icon::before{
+                    content: '\f331';
+                }
+            }
+
+            &-total{
+                background-image: -webkit-linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+                
+                &-icon::before{
+                    content: '\f19a';
+                }
+            }
+        }
+        
+        &__content{
+            font-weight: 300;
+            display: inline-block;
+            text-align: left;
+        }
+    }
+
+    &__h2{
+        font-weight: 300;
+        color: #fff;
+        font-size: 36px;
+        line-height: 1;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    &__p{
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 300;
+    }
+
+    &__chart-left{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        @include chart-styles;
+    }
+
+    &__h3{
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1;
+        color: #333;
+    }
+
+    &__content-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    &__chart-info{
+        font-size: 14px; 
+        display: flex; 
+        align-items: flex-end; 
+    }
+
+    &__info-left{
+        display: flex;
+        margin-right: 12px;
+        align-items: center;
+    }
+
+    &__info-right{
+        display: flex;
+    }
+
+    &_content{
+        margin-right: 12px;
+
+        &_chart2-left{
+            font-size: 14px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+    }
+
+    &_border-left{
+        background: #00b5e9;
+        @include chart-border;
+    }
+
+    &_border-right{
+        background: #00ad5f;
+        @include chart-border;
+    }
+
+    &__chart-percent{
+        margin-right: 35px;
+        display: flex;
+        flex-direction: column;
+
+        &_content-up{
+            font-size: 18px;
+        
+            &::before{
+                color: #63c76a;
+                content: '\f303';
+                @include percent-arrow; 
+            }
+        }
+
+        &_content-down{
+            font-size: 18px;
+
+            &::before{
+                color: #ff4b5a;
+                content: '\f2fe';
+                @include percent-arrow;
+            }
+        }
+    }
+    &_margin{
+        margin-right: 0 !important;
+    }
+
+    &__chart-right{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        @include chart-styles;
+        
+        &_wrap{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 28px;
+        }
+
+        &_content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_chart{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &_first-row{
+            @include dote-chart-center;
+        }
+
+        &_second-row{
+            @include dote-chart-center;
+        }
+
+        &_border-down{
+            background: #fa4251;
+            @include chart-border;
         }
     }
 }
