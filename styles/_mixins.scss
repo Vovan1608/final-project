@@ -62,3 +62,15 @@
     margin-right: 12px;
     align-items: center;
 }
+
+@mixin avatar {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
