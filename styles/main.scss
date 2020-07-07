@@ -1010,7 +1010,7 @@ body{
                 transition: all 0.5s ease;
                 padding: 26px 15px;
                 padding-left: 40px;
-                padding: 26px 15px;
+                padding: 30px 15px;
                 padding-left: 40px;
 
                 &:hover{
@@ -1087,6 +1087,18 @@ body{
         font-weight: 500;
         margin: 0;
         line-height: 1.2;
+
+        &-avatar{
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+    }
+
+    &_p-avatar{
+        color: #333;
     }
 
     &__span-info{
@@ -1107,10 +1119,14 @@ body{
         overflow: hidden;
         
 
-        &:after{
+        &-grey:after{
             @include avatar;
-            background: #ccc;
-            
+            background: #ccc;  
+        }
+
+        &-green:after{
+            @include avatar;
+            background: #63c76a !important;  
         }
 
         &-lbl{
@@ -1123,6 +1139,12 @@ body{
         padding-left: 23px;
     }
 
+    &__time{
+        margin-top: 26px;
+        font-size: 14px;
+        color: #808080
+    }
+
 }
 
 .three{
@@ -1133,6 +1155,22 @@ body{
 .one{
     grid-column-start: 4;
     grid-column-end: 5;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &_content{
+        max-width: 100%;
+        text-align: end;
+        padding: 60px 0 20px 0;
+        // padding-top: 20px;
+        font-size: 14px;
+        color: #666;
+        line-height: calc(24/14);
+    }
 }
 
 
