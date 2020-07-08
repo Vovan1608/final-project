@@ -806,13 +806,14 @@ body{
     &__table{
         border-radius: 10px;
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        overflow: auto;
         
 
         &_left{
             width: 100%;
             max-width: 100%;
             border-collapse: collapse;
+            
         }  
     }
 
@@ -868,7 +869,7 @@ body{
         background: -webkit-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        overflow: hidden;
+        overflow: auto;
         color: #fff;
         
 
@@ -1131,6 +1132,7 @@ body{
 
         &-lbl{
             position: relative;
+            align-self: center;
         }
     }
 
@@ -1166,12 +1168,67 @@ body{
         max-width: 100%;
         text-align: end;
         padding: 60px 0 20px 0;
-        // padding-top: 20px;
         font-size: 14px;
         color: #666;
         line-height: calc(24/14);
     }
 }
 
+.m-header{
 
+}
 
+@media (max-width: 1717px) {
+    
+    .header__input{
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 1519px){
+
+    .main__cards_container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main__h2{
+        font-size: 20px;
+    }
+
+    .main__chart-percent {
+        margin-right: 0;
+    }
+
+    .main_p-avatar{
+        font-size: 12px;
+    }
+
+    .main__text-wrap{
+        padding-left: 8px;
+    }
+}
+
+@media (max-width: 1309px){
+
+    .sidebar{
+        display: none;
+        width: 0;
+    }
+
+    .contant-container{
+        padding-left: 0;
+    }
+
+    .header{
+        left: 0;
+    }
+
+    .main__time{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 830px){
+
+}
