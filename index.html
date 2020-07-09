@@ -10,6 +10,97 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     </head>
     <body>
+
+        <!-- Mobile header -->
+        
+            <div class="mob-header">
+                <div class="mob-header__wrap">
+                    <div class="sidebar__logo sidebar__logo_mob">
+                        <a class="sidebar__link" href="#">
+                            <img class="sidebar__image" src="./images/logo.png" alt="logo">
+                        </a>
+                        <button class="mob-header__button">
+                            <span class="mob-header__button_menu"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="drop-menu">
+                    <div class="sidebar__menu">
+                        <nav class="sidebar__navigation">
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu"> 
+                                        <div class="sidebar__tachometr">
+                                            Dashboard
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu">
+                                        <div class="sidebar__chart">
+                                            Charts
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu">
+                                        <div class="sidebar__table">
+                                            Tables
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu">
+                                        <div class="sidebar__forms">
+                                            Forms
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu"> 
+                                        <div class="sidebar__calendar">
+                                            Calendar
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu"> 
+                                        <div class="sidebar__map">
+                                            Maps
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu"> 
+                                        <div class="sidebar__pages">
+                                            Pages
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#" class="sidebar__links-menu"> 
+                                        <div class="sidebar__ui">
+                                            UI Elements
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>       
+                </div>
+                <!-- <div class="input__mob">
+                    <form action="POST" class="header__form">
+                        <input type="text" class="header__input" name="search"
+                        placeholder="Search for datas & reports...">
+                        <button class="header__submit" type="submit">
+                            <span class="header__icon-submit"></span>
+                        </button>
+                    </form>
+                </div> -->
+            </div>
+            
+            
+        
         <!-- Main wrapper -->
         <div class="main-wrapper">
 
@@ -85,10 +176,9 @@
                     </nav>
                 </div>
             </div>
+            
             <!-- Content -->
             <div class="contant-container">
-                <!-- Mobile header -->
-                <div class="m-header"></div>
                 <!-- Desktop container -->
                 <header class="header">
                     <div class="header__desktop">
@@ -108,7 +198,7 @@
                                                 1
                                             </span>
                                         </div>
-                                        <div class="dropdown">
+                                        <div class="dropdown dropdown__mob-position">
                                             <p class="dropdown__title">
                                                 You have 2 new messages
                                             </p>
@@ -329,7 +419,7 @@
                             </button>  
                         </div>
 
-                        <!-- Second row with cards -->
+                        <!--  row with cards -->
                         <div class="main__cards">
                             <div class="main__cards_container main__cards_container-members">
                                 <div class="main__cards_container-members-icon main__icon"></div>
@@ -343,7 +433,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main__cards">
+                        <div class="main__cards mob-right">
                             <div class="main__cards_container main__cards_container-solid">
                                 <div class="main__cards_container-solid-icon main__icon"></div>
                                 <div class="main__cards_content">
@@ -369,7 +459,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main__cards">
+                        <div class="main__cards mob-right">
                             <div class="main__cards_container main__cards_container-total">
                                 <div class="main__cards_container-total-icon main__icon"></div>
                                 <div class="main__cards_content">
@@ -383,8 +473,8 @@
                             </div>
                         </div>
 
-                        <!-- Third row with graphics -->
-                        <div class="main__chart-left">
+                        <!-- row with graphics -->
+                        <div class="main__chart-left four-column">
                             <h3 class="main__h3">
                                 Recent Reports
                             </h3>
@@ -426,7 +516,7 @@
                                 <img src="./images/chart_2.png" alt="chart products-services" class="main__chart-left_left">
                             </div>
                         </div>
-                        <div class="main__chart-right">
+                        <div class="main__chart-right four-column">
                             <h3 class="main__h3">
                                 Char By %
                             </h3>
@@ -455,140 +545,143 @@
                             </div>
                         </div>
 
-                        <!-- Forth row with content -->
-                        <div class="main__overview three">
-                            <div class="main__content">
-                                Earnings By Items
-                            </div> 
-                        </div>
-                        <div class="main__overview one">
-                            <div class="main__content">
-                                Top Countries
-                            </div> 
-                        </div>
-
-                        <!-- Fifth row with tables -->
-                        <div class="main__table three">
-                            <table class="main__table_left">
-                                <thead>
-                                    <tr>
-                                        <th class="main__th">date</th>
-                                        <th class="main__th">order ID</th>
-                                        <th class="main__th">name</th>
-                                        <th class="main__th main_text-r">price</th>
-                                        <th class="main__th main_text-r">quantity</th>
-                                        <th class="main__th main_text-r">total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="main__tr">
-                                        <td class="main__td">2018-09-29 05:57</td>
-                                        <td class="main__td">100398</td>
-                                        <td class="main__td">iPhone X 64Gb Grey</td>
-                                        <td class="main__td main_text-r">$999.00</td>
-                                        <td class="main__td main_text-r">1</td>
-                                        <td class="main__td main_text-r">$999.00</td>
-                                    </tr>
-                                    <tr class="main__tr_odd">
-                                        <td class="main__td">2018-09-28 01:22</td>
-                                        <td class="main__td">100397</td>
-                                        <td class="main__td">Samsung S8 Black</td>
-                                        <td class="main__td main_text-r">$756.00</td>
-                                        <td class="main__td main_text-r">1</td>
-                                        <td class="main__td main_text-r">$756.00</td>
-                                    </tr>
-                                    <tr class="main__tr">
-                                        <td class="main__td">2018-09-27 02:12</td>
-                                        <td class="main__td">100396</td>
-                                        <td class="main__td">Game Console Controller</td>
-                                        <td class="main__td main_text-r">$22.00</td>
-                                        <td class="main__td main_text-r">2</td>
-                                        <td class="main__td main_text-r">$44.00</td>
-                                    </tr>
-                                    <tr class="main__tr_odd">
-                                        <td class="main__td">2018-09-26 23:06</td>
-                                        <td class="main__td">100395</td>
-                                        <td class="main__td">iPhone X 256Gb Black</td>
-                                        <td class="main__td main_text-r">$1199.00</td>
-                                        <td class="main__td main_text-r">1</td>
-                                        <td class="main__td main_text-r">$1199.00</td>
-                                    </tr>
-                                    <tr class="main__tr">
-                                        <td class="main__td">2018-09-25 19:03</td>
-                                        <td class="main__td">100393</td>
-                                        <td class="main__td">USB 3.0 Cable</td>
-                                        <td class="main__td main_text-r">$10.00</td>
-                                        <td class="main__td main_text-r">3</td>
-                                        <td class="main__td main_text-r">$30.00</td>
-                                    </tr>
-                                    <tr class="main__tr_odd">
-                                        <td class="main__td">2018-09-29 05:57</td>
-                                        <td class="main__td">100392</td>
-                                        <td class="main__td">Smartwatch 4.0 LTE Wifi</td>
-                                        <td class="main__td main_text-r">$199.00</td>
-                                        <td class="main__td main_text-r">6</td>
-                                        <td class="main__td main_text-r">$1494.00</td>
-                                    </tr>
-                                    <tr class="main__tr">
-                                        <td class="main__td">2018-09-24 19:10</td>
-                                        <td class="main__td">100391</td>
-                                        <td class="main__td">Camera C430W 4k</td>
-                                        <td class="main__td main_text-r">$699.00</td>
-                                        <td class="main__td main_text-r">1</td>
-                                        <td class="main__td main_text-r">$699.00</td>
-                                    </tr>
-                                    <tr class="main__tr_odd">
-                                        <td class="main__td">2018-09-22 00:43</td>
-                                        <td class="main__td">100393</td>
-                                        <td class="main__td">USB 3.0 Cable</td>
-                                        <td class="main__td main_text-r">$10.00</td>
-                                        <td class="main__td main_text-r">3</td>
-                                        <td class="main__td main_text-r">$30.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="main__table-right one">
-                            <table class="main__table-right_style">
-                                <tbody>
-                                    <tr>
-                                        <td class="main__table-right_td">United States</td>
-                                        <td class="main__table-right_td main_text-r">$119,366.96</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">Australia</td>
-                                        <td class="main__table-right_td main_text-r">$70,261.65</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">United Kingdom</td>
-                                        <td class="main__table-right_td main_text-r">$46,399.22</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">Turkey</td>
-                                        <td class="main__table-right_td main_text-r">$35,364.90</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">Germany</td>
-                                        <td class="main__table-right_td main_text-r">$20,366.96</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">France</td>
-                                        <td class="main__table-right_td main_text-r">$10,366.96</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td">Australia</td>
-                                        <td class="main__table-right_td main_text-r">$5,366.96</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main__table-right_td main__table-right_td-last">Italy</td>
-                                        <td class="main__table-right_td main__table-right_td-last main_text-r">$1639.32</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <!-- row with tables -->
+                        <div class="table-wrap three-column four-column">
+                            <div class="main__overview">
+                                <div class="main__content">
+                                    Earnings By Items
+                                </div> 
+                            </div>
+                            <div class="main__table">
+                                <table class="main__table_left">
+                                    <thead>
+                                        <tr>
+                                            <th class="main__th">date</th>
+                                            <th class="main__th">order ID</th>
+                                            <th class="main__th">name</th>
+                                            <th class="main__th main_text-r">price</th>
+                                            <th class="main__th main_text-r">quantity</th>
+                                            <th class="main__th main_text-r">total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="main__tr">
+                                            <td class="main__td">2018-09-29 05:57</td>
+                                            <td class="main__td">100398</td>
+                                            <td class="main__td">iPhone X 64Gb Grey</td>
+                                            <td class="main__td main_text-r">$999.00</td>
+                                            <td class="main__td main_text-r">1</td>
+                                            <td class="main__td main_text-r">$999.00</td>
+                                        </tr>
+                                        <tr class="main__tr_odd">
+                                            <td class="main__td">2018-09-28 01:22</td>
+                                            <td class="main__td">100397</td>
+                                            <td class="main__td">Samsung S8 Black</td>
+                                            <td class="main__td main_text-r">$756.00</td>
+                                            <td class="main__td main_text-r">1</td>
+                                            <td class="main__td main_text-r">$756.00</td>
+                                        </tr>
+                                        <tr class="main__tr">
+                                            <td class="main__td">2018-09-27 02:12</td>
+                                            <td class="main__td">100396</td>
+                                            <td class="main__td">Game Console Controller</td>
+                                            <td class="main__td main_text-r">$22.00</td>
+                                            <td class="main__td main_text-r">2</td>
+                                            <td class="main__td main_text-r">$44.00</td>
+                                        </tr>
+                                        <tr class="main__tr_odd">
+                                            <td class="main__td">2018-09-26 23:06</td>
+                                            <td class="main__td">100395</td>
+                                            <td class="main__td">iPhone X 256Gb Black</td>
+                                            <td class="main__td main_text-r">$1199.00</td>
+                                            <td class="main__td main_text-r">1</td>
+                                            <td class="main__td main_text-r">$1199.00</td>
+                                        </tr>
+                                        <tr class="main__tr">
+                                            <td class="main__td">2018-09-25 19:03</td>
+                                            <td class="main__td">100393</td>
+                                            <td class="main__td">USB 3.0 Cable</td>
+                                            <td class="main__td main_text-r">$10.00</td>
+                                            <td class="main__td main_text-r">3</td>
+                                            <td class="main__td main_text-r">$30.00</td>
+                                        </tr>
+                                        <tr class="main__tr_odd">
+                                            <td class="main__td">2018-09-29 05:57</td>
+                                            <td class="main__td">100392</td>
+                                            <td class="main__td">Smartwatch 4.0 LTE Wifi</td>
+                                            <td class="main__td main_text-r">$199.00</td>
+                                            <td class="main__td main_text-r">6</td>
+                                            <td class="main__td main_text-r">$1494.00</td>
+                                        </tr>
+                                        <tr class="main__tr">
+                                            <td class="main__td">2018-09-24 19:10</td>
+                                            <td class="main__td">100391</td>
+                                            <td class="main__td">Camera C430W 4k</td>
+                                            <td class="main__td main_text-r">$699.00</td>
+                                            <td class="main__td main_text-r">1</td>
+                                            <td class="main__td main_text-r">$699.00</td>
+                                        </tr>
+                                        <tr class="main__tr_odd">
+                                            <td class="main__td">2018-09-22 00:43</td>
+                                            <td class="main__td">100393</td>
+                                            <td class="main__td">USB 3.0 Cable</td>
+                                            <td class="main__td main_text-r">$10.00</td>
+                                            <td class="main__td main_text-r">3</td>
+                                            <td class="main__td main_text-r">$30.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
-                        <!-- Sixth row blocs with message -->
-                        <div class="main__actions main__actions_left">
+                        <div class="table-wrap one-column four-column">
+                            <div class="main__overview">
+                                <div class="main__content">
+                                    Top Countries
+                                </div> 
+                            </div>
+                            <div class="main__table-right">
+                                <table class="main__table-right_style">
+                                    <tbody>
+                                        <tr>
+                                            <td class="main__table-right_td">United States</td>
+                                            <td class="main__table-right_td main_text-r">$119,366.96</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">Australia</td>
+                                            <td class="main__table-right_td main_text-r">$70,261.65</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">United Kingdom</td>
+                                            <td class="main__table-right_td main_text-r">$46,399.22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">Turkey</td>
+                                            <td class="main__table-right_td main_text-r">$35,364.90</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">Germany</td>
+                                            <td class="main__table-right_td main_text-r">$20,366.96</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">France</td>
+                                            <td class="main__table-right_td main_text-r">$10,366.96</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td">Australia</td>
+                                            <td class="main__table-right_td main_text-r">$5,366.96</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main__table-right_td main__table-right_td-last">Italy</td>
+                                            <td class="main__table-right_td main__table-right_td-last main_text-r">$1639.32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!--  row blocs with message -->
+                        <div class="main__actions main__actions_left four-column">
                             <div class="main__actions_header main__actions_header-left">
                                 <div class="main__overlay"></div>
                                 <h3 class="main__h3-header main__header-icon">
@@ -650,7 +743,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main__actions main__actions_right">
+                        <div class="main__actions main__actions_right four-column">
                             <div class="main__actions_header main__actions_header-right">
                                 <div class="main__overlay"></div>
                                 <h3 class="main__h3-header main__header-icon">

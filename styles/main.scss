@@ -39,6 +39,12 @@ body{
         align-items: center;
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
         border-right: 1px solid #e5e5e5;
+
+        &_mob{
+            width: 100%;
+            justify-content: space-between;
+            background: #fff;
+        }
     }
 
     &__link{
@@ -79,7 +85,7 @@ body{
     }
 
     &__links-menu{
-        padding: 15px 0;
+        padding: 0;
         text-decoration: none;
         color: $s-b-menu-clr;
         display: block;
@@ -563,6 +569,7 @@ body{
         grid-column-end: -1;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 25px;
     }
 
     &__content{
@@ -706,6 +713,7 @@ body{
         font-size: 14px; 
         display: flex; 
         align-items: flex-end; 
+        flex-wrap: wrap;
     }
 
     &__info-left{
@@ -1146,15 +1154,15 @@ body{
         font-size: 14px;
         color: #808080
     }
-
 }
 
-.three{
+
+.three-column{
     grid-column-start: 1;
-    grid-column-end: 4 !important;
+    grid-column-end: 4;
 }
 
-.one{
+.one-column{
     grid-column-start: 4;
     grid-column-end: 5;
 }
@@ -1174,8 +1182,59 @@ body{
     }
 }
 
-.m-header{
+.mob-header{
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
 
+    &:hover .drop-menu{
+        display: block;;
+        width: 100%;
+        top: 76px;
+        z-index: 9999;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: #f8f8f8;
+
+    }
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button{
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        line-height: 1;
+        vertical-align: top;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        position: relative;
+
+        &_menu::before{
+            width: 20px;
+            height: 15px;
+            display: block;
+            line-height: 1;
+            cursor: pointer;
+            font-size: 22px;
+            color: $main-color;
+            font-family: $awesome;
+            content: '\f0c9';
+            font-weight: 600;
+        }
+    }
+}
+
+.drop-menu{
+    display: none;
 }
 
 @media (max-width: 1717px) {
@@ -1211,9 +1270,16 @@ body{
 
 @media (max-width: 1309px){
 
+    .header{
+        position: relative;
+    }
+
+    .main{
+        padding-top: 50px;
+    }
+
     .sidebar{
         display: none;
-        width: 0;
     }
 
     .contant-container{
@@ -1222,13 +1288,134 @@ body{
 
     .header{
         left: 0;
+        height: 170px;
+    }
+
+    .header__desktop{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .main__time{
         font-size: 10px;
     }
+
+    .sidebar__menu{
+        height: auto;
+        width: 100%;
+    }
+
+    .sidebar__navigation{
+        padding: 0;
+    }
+
+    .sidebar__item{
+        padding: 10px 15px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .sidebar__links-menu{
+        padding: 4px 0;
+    }
+
+    .header__wrap{
+        flex-direction: column;
+        height: 120px;
+    }
+
+    .header__button-wrap{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .dropdown__mob-position{
+        left: 0 !important;
+
+        &::before{
+            left: 1px !important;
+        }
+    }
+
+    .main__h2{
+        font-size: 16px;
+    }
+
+    .main__p{
+        font-size: 12px;
+    }
 }
 
-@media (max-width: 830px){
+@media (max-width: 850px){
+    .header__input{
+        min-width: 200px;
+    }
 
+    .main__cards{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mob-right{
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .four-column{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .main__h2{
+        font-size: 36px;
+    }
+
+    .main__p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 540px){
+    
+    .main__cards{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .main__info_mess{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px){
+
+    .header__notif_icon{
+        margin-right: 15px;
+    }
+
+    .main__content{
+        font-size: 20px;
+    }
+
+    .main__button{
+        line-height: 30px;
+        padding: 0 12px;
+    }
+
+    .dropdown_position-notif{
+        left: -94px;
+
+        &::before{
+            left: 98px !important;
+        }
+    }
+
+    .header__image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header__content{
+        padding: 2px 1px;
+    }
 }
