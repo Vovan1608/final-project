@@ -852,8 +852,16 @@ body{
         border-spacing: 2px;
         padding: 22px 40px;
 
+        &:hover{
+            color: #979595;
+        }
+
         &_odd{
             background-color: #f5f5f5;
+            
+            &:hover{
+                color: #979595;
+            }
         }
     }
 
